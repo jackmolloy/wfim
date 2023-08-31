@@ -1,9 +1,47 @@
+@font-face {
+    font-family: "Family-Regular";
+    src: url("/fonts/family-regular.otf");
+}
+
+@font-face {
+    font-family: "Family-Medium";
+    src: url("/fonts/family-medium.otf");
+}
+
 body {
     margin: 0;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    background-color: #F4F1EA;
+    cursor: url("/cursor.svg"), auto;
 }
+
+
+h1 {
+    color: #333;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 82%;
+    margin: 0px;
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .loader {
     height: 100vh;
@@ -40,4 +78,57 @@ body {
     60% {
         transform: scale(0.4);
     }
+}
+
+
+.grow-header {
+    animation: animateHeader 2.5s;
+    //position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    z-index: 998;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+@keyframes animateHeader {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button {
+    all: unset;
+}
+
+a.subscribe-btn {
+    color: #FF2B00;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 15px;
+    border-color: #FF2B00;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    text-decoration: none;
+    width: fit-content;
+}
+
+a.subscribe-btn:hover {
+    background-color: #FF2B00;
+    color: #F4F1EA;
+    transition: 0.3s;
+}
+
+p.subtext {
+    color: #333;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
