@@ -1,5 +1,5 @@
 import { gsap } from "gsap"
-import imagesLoaded from "imagesloaded"
+import imagesLoaded from "imagesLoaded"
 
 const content = document.querySelector('section')
 
